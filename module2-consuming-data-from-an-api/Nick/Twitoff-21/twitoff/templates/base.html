@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TwitOff - {{ title }}</title>
+    <link rel="stylesheet" href="https://unpkg.com/picnic"/>
+  </head>
+  <body>
+    <nav>
+      <a href="/" class="brand"><span>TwitOff!</span></a>
+
+      <div class="menu">
+        <a href="/update" class="button warning">Update Tweets</a>
+      </div>
+    </nav>
+
+    <article class="flex two" style="padding: 3em 1em;">
+      {% block content %}
+      <h2>Users</h2>
+      {% for user in users %}
+      <a href="/user/{{ user.name }}"><span class="stack">{{ user.name }}</span></a>
+      {% endfor %}
+      {% endblock % }
+
+    </article>
+
+  </body>
+</html>
