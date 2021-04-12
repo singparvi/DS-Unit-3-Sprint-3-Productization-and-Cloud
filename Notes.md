@@ -22,13 +22,26 @@ $ docker run -ti -v "$PWD/somedir":/somedir newimagename /bin/bash.
 
 3. FLASK_APP=twitoff flask run # run the flask webserver
 
-4.  FLASK_APP="twittoff' flask shell
+4.  FLASK_APP="twitoff" flask shell # open the flask shell instead of running webserver
 
 5. from twitoff.models import User
 
 6. flask shell
 
 7. source venv/bin/activate # for activating the venv shell
+
+deactivate by either 
+
+deactivate 
+
+or 
+Force deactivate venv 
+
+```python
+virtualenv . -vvv --with-traceback
+./Scripts/activate
+deactivate
+```
 
 8.FLASKSQLalchemy commands 
 DB.drop_all()
